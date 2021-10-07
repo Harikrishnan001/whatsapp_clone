@@ -7,15 +7,16 @@ class CustomFloatingActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 80.0, left: 20.0, right: 20.0),
-          child: WrittenStatusButton(),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 10.0, top: 55.0),
-          child: GestureDetector(
+    return Container(
+      height: 140.0,
+      width: 70.0,
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          WrittenStatusButton(),
+          GestureDetector(
             onTap: () {
               print("Camera tapped");
             },
@@ -40,9 +41,45 @@ class CustomFloatingActionButton extends StatelessWidget {
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
+    // return Stack(
+    //   children: [
+    //     Padding(
+    //       padding: const EdgeInsets.only(bottom: 80.0, left: 20.0, right: 20.0),
+    //       child: WrittenStatusButton(),
+    //     ),
+    //     Padding(
+    //       padding: const EdgeInsets.only(left: 10.0, top: 55.0),
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           print("Camera tapped");
+    //         },
+    //         child: Container(
+    //           height: 60.0,
+    //           width: 60.0,
+    //           decoration: BoxDecoration(
+    //             color: Colors.green,
+    //             shape: BoxShape.circle,
+    //             boxShadow: [
+    //               BoxShadow(
+    //                 color: Colors.grey,
+    //                 offset: Offset(0, 3),
+    //                 blurRadius: 5.0,
+    //               )
+    //             ],
+    //           ),
+    //           child: Icon(
+    //             Icons.camera_alt_rounded,
+    //             size: 22.0,
+    //             color: Colors.white,
+    //           ),
+    //         ),
+    //       ),
+    //     ),
+    //   ],
+    // );
   }
 }
 
@@ -63,10 +100,16 @@ class WrittenStatusButton extends StatelessWidget {
         color: Colors.blueGrey[50],
         shape: BoxShape.circle,
       ),
-      child: Icon(
-        Icons.edit,
-        color: Colors.blueGrey,
-        size: 25.0,
+      child: IconButton(
+        icon: Icon(
+          Icons.edit,
+          color: Colors.blueGrey,
+          size: 25.0,
+        ),
+        onPressed: () {
+          print("Add story!");
+          //TODO:add story
+        },
       ),
     );
   }

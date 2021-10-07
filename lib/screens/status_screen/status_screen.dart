@@ -65,7 +65,7 @@ class StatusScreen extends StatelessWidget {
                   ],
                 ),
               );
-            }, childCount: 2),
+            }, childCount: 6),
           ),
           SliverToBoxAdapter(
             child: Padding(
@@ -123,7 +123,6 @@ class StatusScreen extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: CustomFloatingActionButton(),
     );
   }
 }
