@@ -1,4 +1,6 @@
-class MyApp extends StatelessWidget {
+import 'package:flutter/material.dart';
+
+class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,7 +57,10 @@ class MyApp extends StatelessWidget {
             ),
           ]),
         ),
-        floatingActionButton: Container(decoration:BoxDecoration(shape:BoxShape.circle ,color: Colors.green), child: IconButton(icon:Icon(Icons.message), onPressed:(){})),
+        floatingActionButton: Container(
+            decoration:
+                BoxDecoration(shape: BoxShape.circle, color: Colors.green),
+            child: IconButton(icon: Icon(Icons.message), onPressed: () {})),
       ),
     );
   }
