@@ -7,12 +7,12 @@ class StatusCircleIndicator extends StatelessWidget {
   final int viewed;
   final Color viewedColor;
   final Color unViewedColor;
-  final String imageURL;
+  final String? imageURL;
 
   const StatusCircleIndicator({
-    Key key,
-    @required this.total,
-    @required this.viewed,
+    Key? key,
+    required this.total,
+    required this.viewed,
     this.imageURL, //TODO:use image
     this.viewedColor = Colors.grey,
     this.unViewedColor = Colors.green,
@@ -42,8 +42,8 @@ class StatusPainter extends CustomPainter {
   final Color viewedColor;
   final Color unviewedColor;
   StatusPainter({
-    @required this.total,
-    @required this.viewed,
+    required this.total,
+    required this.viewed,
     this.viewedColor = Colors.grey,
     this.unviewedColor = Colors.green,
   });

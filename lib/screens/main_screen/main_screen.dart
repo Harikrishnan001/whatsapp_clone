@@ -8,7 +8,7 @@ import '../../screens/status_screen/status_screen.dart';
 const _kCustomTabBarHeight = 55.0;
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key key}) : super(key: key);
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   _MainScreenState createState() => _MainScreenState();
@@ -16,7 +16,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  late TabController _tabController;
   @override
   void initState() {
     _tabController = TabController(length: 3, vsync: this);
@@ -36,6 +36,7 @@ class _MainScreenState extends State<MainScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         title: Text('WhatsApp'),
         actions: [
           IconButton(icon: Icon(Icons.search), onPressed: () {}),
@@ -138,11 +139,11 @@ class CustomTabWidget extends StatefulWidget {
   final TabController controller;
 
   const CustomTabWidget({
-    @required this.text,
-    @required this.index,
-    @required this.controller,
+    required this.text,
+    required this.index,
+    required this.controller,
     this.count = 0,
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

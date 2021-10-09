@@ -5,7 +5,7 @@ import 'components/my_status_tile.dart';
 import 'components/status_circle_indicator.dart';
 
 class StatusScreen extends StatelessWidget {
-  const StatusScreen({Key key}) : super(key: key);
+  const StatusScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

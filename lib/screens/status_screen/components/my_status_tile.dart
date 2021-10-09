@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyStatusTile extends StatelessWidget {
   const MyStatusTile({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
